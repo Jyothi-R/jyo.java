@@ -1,0 +1,38 @@
+import java.util.*;
+
+ // Compiler version JDK 11.0.2
+
+ class Dcoder
+ {
+   public static void main(String args[])
+   { 
+    String name;
+    char[] an;
+    char[] ran;
+   
+    Scanner s = new Scanner(System.in);
+    System.out.println("Type any name");
+    name = s.next();
+    an = new char[name.length()];
+    
+  
+    for(int i=0; i<name.length(); i++)
+    {
+      
+      an[i] = name.charAt(i);
+    }
+    
+    
+    System.out.print("\nreverse your type string\n"+name+" = ");
+   
+    for(int i=name.length()-1; i>=0; i--)
+    {
+      
+        System.out.print(an[i]);
+      
+      
+    }
+   
+   
+   }
+ }
