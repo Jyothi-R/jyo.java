@@ -1,0 +1,67 @@
+Employee.java
+
+import java.io.Serializable;    
+public class Employee implements Serializable  
+{    
+int empid;    
+String empname;    
+public Empoyee(int empid, String empname)   
+{    
+this.empid = empid;    
+this.empname = empname;    
+}    
+}  
+
+
+SerializationExample.java
+
+import java.io.*;    
+class SerializationExample   
+{    
+public static void main(String args[])  
+{    
+Try  
+{    
+//Creating the object    
+Employee emp = new Employee(198054,"Andrew");    
+//Creates a stream and writes the object    
+FileOutputStream fout=new FileOutputStream("employee.txt");    
+ObjectOutputStream out=new ObjectOutputStream(employeeout);    
+out.writeObject(emp);    
+out.flush();    
+//closes the output stream    
+out.close();    
+System.out.println("Successfully Created");    
+}  
+catch(Exception e)  
+{  
+System.out.println(e);  
+}    
+}    
+}    
+
+
+
+DeserializationExample.java
+
+import java.io.*;    
+class DeserializationExample   
+{    
+public static void main(String args[])  
+{    
+try  
+{    
+//Creating a stream to read the object    
+ObjectInputStream in=new ObjectInputStream(new FileInputStream("employee.txt"));    
+Employee e=(Employee)in.readObject();    
+//prints the data of the serialized object    
+System.out.println(e.empid+" "+e.empname);    
+//closing the input stream    
+in.close();    
+}  
+catch(Exception e)  
+{  
+System.out.println(e);  
+}    
+}    
+}    
