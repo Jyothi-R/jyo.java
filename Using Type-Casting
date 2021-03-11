@@ -1,0 +1,60 @@
+PrintAsciiValueExample1.java
+
+public class PrintAsciiValueExample3   
+{  
+public static void main(String[] args)   
+{  
+//characters whose ASCII value to be found  
+char ch1 = 'a';  
+char ch2 = 'b';  
+//casting or converting a charter into int type  
+int ascii1 = (int) ch1;  
+int ascii2 = (int) ch2;  
+System.out.println("The ASCII value of " + ch1 + " is: " + ascii1);  
+System.out.println("The ASCII value of " + ch1 + " is: " + ascii2);  
+}  
+}  
+
+
+PrintAsciiValueExample2.java
+
+import java.util.Scanner;  
+public class PrintAsciiValueExample4  
+{  
+public static void main(String args[])  
+{  
+System.out.print("Enter a character: ");  
+Scanner sc = new Scanner(System.in);  
+char chr = sc.next().charAt(0);  
+int asciiValue = chr;  
+System.out.println("ASCII value of " +chr+ " is: "+asciiValue);  
+}  
+}  
+
+
+AsciiValueOfAllChracters.java
+
+public class AsciiValueOfAllChracters  
+{  
+public static void main(String[] args)   
+{  
+for(int i = 0; i <= 255; i++)  
+{  
+System.out.println(" The ASCII value of " + (char)i + "  =  " + i);  
+}  
+}  
+}   
+
+
+AsciiValueAtoZ.java
+
+public class AsciiValueAtoZ  
+{  
+public static void main(String[] args)   
+{  
+for(int i = 65; i <= 90; i++)  
+{  
+System.out.println(" The ASCII value of " + (char)i + "  =  " + i);  
+}  
+}  
+}  
